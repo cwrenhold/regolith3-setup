@@ -1,0 +1,5 @@
+# Profile for laptop eDP-1 positioned to the right of external monitor DP-2
+profile office {
+    output "eDP-1" position 3440,500
+    output "Dell Inc. DELL U3423WE 4SPGMP3" position 0,0
+}

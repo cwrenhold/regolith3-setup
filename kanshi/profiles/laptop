@@ -1,0 +1,4 @@
+# Setup for the laptop when disconnected from external monitors
+profile laptop {
+    output "eDP-1" position 0,0
+}

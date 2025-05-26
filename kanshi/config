@@ -1,1 +1,2 @@
-include /home/cathy/.config/regolith3/kanshi/profiles/*
+# Kanshi main configuration
+include ~/.config/regolith3/kanshi/profiles/*
