@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/wofi",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
@@ -18,6 +19,7 @@
     "modules-right": [
         //"mpd",
         //"idle_inhibitor",
+        "keyboard-state",
         "pulseaudio",
         //"network",
         "power-profiles-daemon",
@@ -25,7 +27,6 @@
         //"memory",
         //"temperature",
         //"backlight",
-        //"keyboard-state",
         //"sway/language",
         "battery",
         "battery#bat2",
@@ -68,6 +69,11 @@
         "format-icons": ["", ""],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
+    },
+    "sway/window": {
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "$1 : ",
+        }
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -212,5 +218,12 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/wofi": {
+        "format": " ✿",
+        "max-length": 40,
+        "interval": 0,
+        "escape": true,
+        "on-click": "wofi --show drun --location top_left",
     }
 }
